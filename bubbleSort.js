@@ -9,6 +9,15 @@ function bubbleSort(arr) {
     // - Compare each pair of adjacent elements and swap them if they are in the wrong order.
     // - Repeat the process until no more swaps are needed.
     // - You can track if a swap was made to optimize the algorithm.
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[j] > arr[j+1]) {
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    }
 }
 
 // Test cases

@@ -6,18 +6,21 @@
 function selectionSort(arr) {
     
     // Iterate over each element in the array
-    for () {
+    for (let i = 0; i < arr.length; i++) {
         // Assume the current position is the minimum
-        
-        for () {
+        let indexOfMin = i; 
+
+        for (let j = i + 1; j < arr.length; j++) {
             // Find the actual minimum element in the unsorted portion
-            if () {
-        
+            if (arr[j] < arr[indexOfMin]) {
+                indexOfMin = j;
             }
         }
         // Swap the found minimum element with the element at the current position
-        if () {
-           
+        if (indexOfMin !== i) {
+           const temp = arr[i];
+           arr[i] = arr[indexOfMin];
+           arr[indexOfMin] = temp;
         }
     }
 }
